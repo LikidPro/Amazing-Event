@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <div id="app">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanzin Events Stats</title>
+  <link rel="shortcut icon" href="./assets/img/Logo Amazing Events.png" type="image/x-icon">
+  <link rel="stylesheet" :href="titulo1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <nav id="nav2" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/img/Logo Amazing Events.png" alt="" width="200" height="50">
+        </a>
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav gap-5 fs-3">
+          <li class="nav-item">
+            <a class="nav-link " href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./upcoming.html">Upcoming Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./past.html">Past Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html"> Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"> Stats</a>
+          </li>
+          <button id="botttonc" type="button" class="btn btn-secondary align-self-center" v-on:click="cambi" >
+            <span class="material-symbols-outlined">
+              contrast
+              </span>
+          </button>
+          <li class="nav-item">
+            <a class="nav-link" href="./"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="d-flex justify-content-between align-items-center">
+      <div class="cambiarpagina ms-5">
+        <a class="botonparacambiar" href="./past.html">Previus</a>
+      </div>
+      <h1 class="display-1  fw-bolder ">
+        Stats
+      </h1>
+      <div class="cambiarpagina me-5">
+        <a class="botonparacambiar" href="./stats.html">Next</a>
+      </div>
+    </header>
+    <main class=" d-flex justify-content-center">
+      <table class="col-8 text-center m-3">
+        <colgroup>
+          <col class="dosprimeras" span="2">
+          <col class="laultima" span="1">
+        </colgroup>
+        <thead>
+          <tr>
+            <th colspan="3" class="display-6 ps-2">
+              Events Statistics
+            </th>
+          </tr>
+        </thead>
+        <tbody id="eventsstatis">
+          <tr>
+            <td class="p-2   colordistinto display-6 fw-bolder">Events with the highest percentage of affendance</td>
+            <td class="p-2   colordistinto display-6 fw-bolder">Events with the lowest percentage of affendance</td>
+            <td class="p-2   colordistinto display-6 fw-bolder">Event with large capacity</td>
+          </tr>
+         
+            <tr>
+              <td class="p-2  ">{{primerTabla[0].name}} </td>
+              <td class="p-2  ">{{primerTabla[1].name}}</td>
+              <td class="p-2  ">{{primerTabla[2].name}}</td>
+            </tr>
+            
+         
+        </tbody>
+        <tr>
+          <th colspan="3" class="display-6 ps-2">Upcoming events statistics by category</th>
+        </tr>
+        <tbody id="upcomingstatis">
+          <tr>
+            <td class="p-2  colordistinto display-6 fw-bolder">categories</td>
+            <td class="p-2  colordistinto display-6 fw-bolder">revenues</td>
+            <td class="p-2  colordistinto display-6 fw-bolder">percentage of alterdance</td>
+          </tr>
+          <div >
+            <tr v-for="item in segundaTabla">
+              <td  class="p-2  ">{{item.check}} </td>
+              <td class="p-2  ">{{item.ingr? item.ingr : 0}}  $</td>
+              <td class="p-2  "> {{item.porce? item.porce : 0 }} %  </td>
+            </tr>
+
+          </div>
+          
+            
+        </tbody>
+        <th colspan="3" class="display-6 ps-2">Past Events Statistic by categorie</th>
+        </tr>
+        <tbody id="paststatis">
+          <tr>
+            <td class="p-2  colordistinto display-6 fw-bolder">categories</td>
+            <td class="p-2  colordistinto display-6 fw-bolder">revenues</td>
+            <td class="p-2  colordistinto display-6 fw-bolder">percentage of alterdance</td>
+          </tr>
+          <tr v-for="item in terceraTabla">
+            <td class="p-2  ">{{item.check}}</td>
+            <td class="p-2  ">{{item.ingr}} $</td>
+            <td class="p-2  ">{{item.porce}} %</td>
+          </tr>
+        </tbody>
+  
+      </table>
+    </main>
+    <div class="bordeee">
+  
+    </div>
+    <footer>
+      <div class="separarlogos">
+        <a class="d-flex align-items-center" href=""> <img class="logosredes"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png"
+            alt=""></a>
+        <a class="d-flex align-items-center" href=""> <img class="logosredes"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/800px-Facebook_Logo_%282019%29.png"
+            alt=""></a>
+        <a class="d-flex align-items-center" href=""> <img class="logosredes"
+            src="https://es.logodownload.org/wp-content/uploads/2018/10/whatsapp-logo-11.png" alt=""></a>
+  
+      </div>
+      <div class="separarcohort">
+        <h2>
+          Cohort 33
+        </h2>
+      </div>
+    </footer>
+  
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>

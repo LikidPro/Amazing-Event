@@ -1,0 +1,349 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: solid red .1rem */
+}
+
+body {
+    background-color: black !important;
+}
+
+nav {
+    min-height: 8vh;}
+    
+#nav2{
+    background-color: aliceblue !important;
+    
+}
+.nav-link{
+    color: black !important;
+    -webkit-text-stroke: #D30366 .02rem;
+}
+#botttonc{
+    height: 20% !important;
+}
+
+header {
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    border: solid gray .1rem;
+}
+
+.cambiarpagina {
+    min-height: 25%;
+    min-width: 2.3%;
+    background-color: black;
+    display: flex;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonparacambiar {
+    text-decoration: none;
+    color: white;
+}
+
+.botonparacambiar:hover {
+    color: #D30366;
+}
+
+h1 {
+    color: #D30366;
+}
+
+.buscadorcolor {
+    color: #D30366 !important;
+    font-weight: bolder !important;
+}
+
+h5 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.card {
+    box-sizing: border-box !important;
+    background-color: #202020 !important;
+
+}
+
+.card:hover {
+     transform: scale(1.2); 
+    background-color: violet !important;
+}
+
+
+.botoncolor{
+    background-color: #D30366 !important;
+}
+
+.labels label{
+    color: black;
+    
+}
+.contacdivletra label{
+    color: black !important;
+}
+.contacdivletra input{
+    border: #202020 solid;
+}
+.contacdivletra textarea{
+    border: #202020 solid;
+}
+
+main {
+
+    min-height: 76vh;
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-pantalla-humo-rosa-estetico_53876-138232.jpg?w=2000);
+    background-repeat: repeat;
+   /*  background-size: cover; */
+}
+
+.tamañodelascartas {
+    min-height: 64vh;
+    padding-bottom: 2rem;
+}
+
+img {
+    border-radius: 1rem !important;
+}
+
+footer {
+    height: 6vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+}
+
+.logosredes {
+    height: 60%;
+}
+
+.separarlogos {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.separarcohort {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #D30366;
+}
+
+.bordeee {
+    border: solid #D30366 .2rem;
+}
+
+.active {
+    color: #D30366 !important;
+}
+
+label {
+    color: white;
+}
+
+.alturadelform {
+
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+}
+
+th {
+    color: white;
+    font-weight: bolder !important;
+    background-color: #D30366;
+    height: 10%;
+}
+
+td {
+    color: rgb(7, 7, 7);
+    height: 8%;
+}
+
+table {
+    height: 80%;
+    align-self: center;
+}
+
+table,
+th,
+td,
+tr {
+    border: 1px solid white !important;
+}
+
+.dosprimeras {
+    width: 33%;
+}
+.laultima{
+    width: 33%;
+}
+
+.imagendetalle {
+    height: 50%;
+    width: 80%;
+    padding-top: 1rem;
+}
+
+.maincontac {
+    height: 73vh !important;
+}
+
+.imagendetalle img {
+
+    height: 100%;
+    width: 100%;
+}
+
+.tarjetadetalle {
+    height: 75%;
+    width: 30%;
+    background-color: #D30366;
+    border-radius: 1rem;
+}
+
+.tarjetacard {
+    height: 50%;
+}
+
+.textodetalle {
+    margin-top: 1rem;
+    height: 50%;
+    width: 80%;
+}
+
+#loschekbox {
+    min-height:0rem;
+}
+
+.buscador {
+    min-height: 2vh;
+    align-items: center;
+}
+
+form {
+    min-height: 3vh;
+}
+.colordistinto{
+ 
+    -webkit-text-stroke: black .1rem
+}
+
+@media (max-width:1980px) {}
+
+@media (max-width:1440px) {
+
+    .card {
+        width: 16rem !important;
+
+    }
+}
+
+@media (max-width:1024px) {
+
+    nav {
+        width: 100%;
+    }
+
+    .buscador {
+        flex-direction: column;
+        
+    }
+    .elbuscador{
+        width: 100% !important;
+
+    }
+    .elbuscador2{
+        width: 70% !important;
+    }
+    .check{
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media (max-width:768px) {
+    .collapse {
+        background-color: #D30366 !important;
+
+    }
+
+    .nav-link {
+        color: black !important;
+        font-weight: bolder !important;
+        text-align: center !important;
+    }
+
+    .labelclass {
+        gap: 1rem;
+
+    }
+
+    .carddetail {
+        width: 80% !important;
+
+    }
+
+}
+
+@media (max-width:425px) {
+
+    .tamañodelascartas {
+        gap: 1rem
+    }
+
+    .paracelu {
+        height: 85vh;
+    }
+
+    .logosredes {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    form {
+        display: flex;
+    }
+
+    label {
+        margin-left: 1rem;
+    }
+
+    .cuandoachico {
+        width: 8rem !important;
+    }
+
+    .labelclass {
+        gap: .2rem;
+
+    } 
+    .elbuscador2{
+        width: 70% !important;
+      
+    }
+    .check{
+        flex-direction: column;
+        text-align: center;
+        align-items: center !important;
+       
+    } 
+    
+}
+
+@media (max-width:320px) {}
